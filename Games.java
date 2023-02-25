@@ -1,6 +1,14 @@
 import java.util.Random;
 
 public class Games {
+    
+    /*
+     * ДОП: Сделать гонки:
+     * - задаём растояние
+     * - едут до финиша.
+     * Сказать кто победит.
+     */
+
     private static int defaultIndex;
     static {
         defaultIndex = 1;

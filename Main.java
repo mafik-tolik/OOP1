@@ -1,4 +1,5 @@
 public class Main {
+    
     /*
      * Виды спецификаторов:
      * %d: целочисленных значений
@@ -9,6 +10,7 @@ public class Main {
      * %c: для вывода одиночного символа
      * %s: для вывода строковых значений
      */
+
     public static void main(String[] args) {
         Cars car1 = new Cars("BMW", 2023, 5000000, "черный", 3);
         Cars car2 = new Cars("Mercedes", 2022, 6000000, "белый", 2.9);
