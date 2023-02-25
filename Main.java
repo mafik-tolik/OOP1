@@ -1,5 +1,5 @@
 public class Main {
-    
+
     /*
      * Виды спецификаторов:
      * %d: целочисленных значений
@@ -12,8 +12,8 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        Cars car1 = new Cars("BMW", 2023, 5000000, "черный", 3);
-        Cars car2 = new Cars("Mercedes", 2022, 6000000, "белый", 2.9);
+        Cars car1 = new Cars("<Бумер>", 2023, 5000000, "черный", 3);
+        Cars car2 = new Cars("Мерин", 2022, 6000000, "белый", 2.9);
         Cars car3 = new Cars("Лада Седан", 2000, 1000000, "баклажан", 1.6);
 
         // System.out.println(car1.getInfo());
