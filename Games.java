@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Games {
-    
+
     /*
      * ДОП: Сделать гонки:
      * - задаём растояние
@@ -16,7 +16,7 @@ public class Games {
 
     private int distance;
     private int id;
-    Random rand;
+    private Random rand;
 
     public Games() {
         this.distance = 0;
@@ -26,7 +26,7 @@ public class Games {
 
     public void startGame(Cars c1, Cars c2, Cars c3) {
 
-        rand = new Random();
+        this.rand = new Random();
         this.distance = rand.nextInt(100, 200);
         System.out.printf("Игра %d началачь, дистанция трассы равна: %d\n", id, distance);
         int dist1 = 0;
@@ -40,17 +40,17 @@ public class Games {
 
             if (dist1 >= this.distance || dist2 >= this.distance || dist3 >= this.distance) {
                 if (dist1 > dist2 && dist1 > dist3) {
-                    System.out.printf("Гонка %d завершена, победил автомобиль: %s\n", id, c1.model);
+                    System.out.printf("Гонка %d завершена. Победил автомобиль: %s\n", id, c1.getModel());
                 } else if (dist2 > dist1 && dist2 > dist3) {
-                    System.out.printf("Гонка %d завершена, победил автомобиль: %s\n", id, c2.model);
+                    System.out.printf("Гонка %d завершена. Победил автомобиль: %s\n", id, c2.getModel());
                 } else if (dist3 > dist1 && dist3 > dist2) {
-                    System.out.printf("Гонка %d завершена, победил автомобиль: %s\n", id, c3.model);
+                    System.out.printf("Гонка %d завершена. Победил автомобиль: %s\n", id, c3.getModel());
                 } else {
-                    System.out.println("Гонка завершена, одновременно пришли два или три автомобиля");
+                    System.out.printf("Гонка %d завершена. Одновременно пришли два или три автомобиля\n", id);
                 }
-                c1.mileage += dist1;
-                c2.mileage += dist2;
-                c3.mileage += dist3;
+                c1.setMileage(dist1);
+                c2.setMileage(dist2);
+                c3.setMileage(dist3);
                 return;
             }
         }

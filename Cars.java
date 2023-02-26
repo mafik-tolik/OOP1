@@ -1,6 +1,6 @@
 public class Cars {
 
-    /*
+    /**
      * Напишите класс Car.
      * В классе должна храниться следующая информация:
      * название автомобиля - model;
@@ -10,7 +10,7 @@ public class Cars {
      * объем двигателя - power.
      */
 
-    /*
+    /**
      * Доработайте класс Car.
      * В классе должна храниться следующая информация:
      * Свойство - которое говорит заведен авто или нет
@@ -25,14 +25,13 @@ public class Cars {
         On, Off
     }
 
-    String model;
-    int year;
-    double price;
-    String color;
-    double power;
+    private String model;
+    private int year;
+    private double price;
+    private String color;
+    private double power;
     private Status status;
-    int mileage;
-    int speed;
+    private int mileage;
 
     public Cars(String model, int year, double price, String color, double power) {
         this.model = model;
@@ -42,7 +41,6 @@ public class Cars {
         this.power = power;
         this.status = Status.Off;
         this.mileage = 0;
-        this.speed = 0;
     }
 
     public String getInfo() {
@@ -50,12 +48,28 @@ public class Cars {
                 power);
     }
 
-    public String getStatus() {
-        return String.format("status: %s", status);
+    public String getModel() {
+        return model;
     }
 
-    public String getMileage() {
-        return String.format("Общий пробег автомобиля %s равен: %d", model, mileage);
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(int dist) {
+        this.mileage += dist;
     }
 
     public void powerButton() {
